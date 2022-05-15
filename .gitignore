@@ -40,3 +40,9 @@ testem.log
 # System files
 .DS_Store
 Thumbs.db
+.vscode
+.vscode/launch.json
+api/routes/__pycache__
+.vscode
+.vscode
+.vscode/launch.json

@@ -1,1 +1,50 @@
+
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@use '@angular/material' as mat;
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat.core();
+
+$dark-primary: mat.define-palette(mat.$pink-palette);
+$dark-accent: mat.define-palette(mat.$blue-gray-palette);
+$dark-theme: mat.define-dark-theme((
+ color: (
+   primary: $dark-primary,
+   accent: $dark-accent,
+ )
+));
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include mat.all-component-themes($dark-theme);
+
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; background: #121212; }
+body { margin: 15rem; font-family: -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif; color: white; overflow: hidden;}
+
+mat-card-footer {
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.uiMain {
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+.urlForm {
+  min-width: 100px;
+  max-width: 100%;
+  width: 100%;
+}
+
+.albumList {
+  text-align: left;
+  margin-left: 2rem;
+}
