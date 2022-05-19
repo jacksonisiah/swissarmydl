@@ -1,19 +1,16 @@
 <mat-card class="uiMain" [class.mat-elevation-z8]>
   <mat-card-title-group>
     <mat-card-title>Swiss Army Downloader</mat-card-title>
-    <button mat-flat-button><mat-icon class="cog" aria-hidden="false" aria-label="settings">settings</mat-icon></button>
+    <button (click)="openDialog()" mat-icon-button><mat-icon class="cog" aria-hidden="false" aria-label="settings">settings</mat-icon></button>
   </mat-card-title-group>
-  <mat-card-subtitle>Insert an album link below to download it.</mat-card-subtitle>
+  <mat-card-subtitle>Insert a valid link below to queue a download for it.</mat-card-subtitle>
   <mat-card-content>
-    <p></p>
-    <p></p>
     <mat-form-field class="urlForm" appearance="outline" >
       <mat-label>Tidal/Deezer URL</mat-label>
       <input matInput placeholder="">
     </mat-form-field>
-    <button class="downloadButton" mat-flat-button color="primary" [class.mat-elevation-z8]>Download</button>
+    <div class="downloadButton">
+      <button class="downloadButton" mat-flat-button color="primary" [class.mat-elevation-z8]>Download</button>
+    </div>
   </mat-card-content>
-  <mat-card-footer>
-    catfile powered &copy; 2022 Jackson Isaiah
-  </mat-card-footer>
 </mat-card>

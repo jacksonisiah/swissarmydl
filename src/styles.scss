@@ -25,8 +25,10 @@ $dark-theme: mat.define-dark-theme((
 
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; background: #121212; }
-body { margin: 15rem; font-family: -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif; color: white; overflow: hidden;}
+html, body { overflow: hidden; color: white; height: 100%; background: #121212; font-family: -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif; }
+
+// add margins for higher res screens
+@media (min-width:1025px) { body { overflow: hidden; margin-left: 10rem; margin-right: 10rem; } }
 
 mat-card-footer {
     text-align: center;
@@ -34,8 +36,8 @@ mat-card-footer {
 }
 
 .uiMain {
-    padding: 2rem;
-    margin-bottom: 2rem;
+    padding: 1rem;
+    margin: 1rem;
 }
 
 .urlForm {
@@ -44,7 +46,23 @@ mat-card-footer {
   width: 100%;
 }
 
+.downloadButton {
+  margin: auto;
+  align-items: center;  
+  display: flex;  
+  justify-content: center;  
+}
+
 .albumList {
+  margin-top: 2rem;
   text-align: left;
   margin-left: 2rem;
+}
+
+.copyright {
+  bottom: 0;
+  margin-top: 1rem;
+  align-items: center;  
+  display: flex;  
+  justify-content: center;
 }
